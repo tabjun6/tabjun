@@ -13,3 +13,13 @@ body {
   overflow: hidden;
   margin: 0;
 }
+FileOutputStream f9= new FileOutputStream("111-4.text");
+        FileInputStream f10 = new FileInputStream("111.text");
+        BufferedOutputStream f11 = new BufferedOutputStream(f9);
+        BufferedInputStream f12 = new BufferedInputStream(f10);
+        while (true) {
+            int read = f12.read();
+            if(read==-1){
+                break;
+            }else {
+                f11.write(read);
